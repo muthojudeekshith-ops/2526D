@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2526D | Happy Birthday Daddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="book">
+
+    <!-- INTERFACE 1: PIN -->
+    <section class="page active" id="page1">
+      <div class="page-content cover-content">
+        <p class="small-heading">A SPECIAL BOOK FOR</p>
+        <h1>Daddy</h1>
+        <div class="line"></div>
+        <p class="subtitle">A little something from your son.</p>
+
+        <form id="pinForm">
+          <label for="pinInput">Enter your secret PIN</label>
+          <input
+            type="password"
+            id="pinInput"
+            inputmode="numeric"
+            maxlength="4"
+            placeholder="••••"
+            autocomplete="off"
+            required
+          >
+          <p id="pinError" class="error" aria-live="polite"></p>
+          <button type="submit">Open the Book →</button>
+        </form>
+
+        <p class="page-number">2526D</p>
+      </div>
+    </section>
+
+    <!-- INTERFACE 2: BIRTHDAY + TWO PHOTOS -->
+    <section class="page" id="page2" hidden>
+      <div class="page-content">
+        <p class="small-heading">A DAY JUST FOR YOU</p>
+
+        <h2>HAPPY BIRTHDAY<br>DADDY</h2>
+
+        <div class="photo-container">
+          <img src="D1.jpeg" alt="A special memory with Daddy">
+          <img src="D2.jpeg" alt="Another special memory with Daddy">
+        </div>
+
+        <p class="subtitle">
+          Two pictures, countless memories.
+        </p>
+
+        <div class="navigation">
+          <button type="button" class="secondary" data-back="1">
+            ← Previous
+          </button>
+          <button type="button" data-next="3">
+            Turn Page →
+          </button>
+        </div>
+
+        <p class="page-number">1</p>
+      </div>
+    </section>
+
+    <!-- INTERFACE 3: PROMISE + FINAL WISH -->
+    <section class="page" id="page3" hidden>
+      <div class="page-content promise-content">
+        <p class="small-heading">A PROMISE FROM YOUR SON</p>
+
+        <h2>My Promise to You</h2>
+
+        <div class="line"></div>
+
+        <div class="promise-text" id="promiseText">
+          <p>
+            [Write your promise passage here.]
+          </p>
+        </div>
+
+        <div class="ending">
+          <p class="small-heading">AND FINALLY...</p>
+          <h2>Once Again,</h2>
+          <h2>Happy Birthday Daddy!</h2>
+          <span class="heart">♥</span>
+          <p class="signature">With love, Your Son</p>
+        </div>
+
+        <div class="navigation">
+          <button type="button" class="secondary" data-back="2">
+            ← Previous
+          </button>
+          <button type="button" id="restartButton">
+            Close the Book
+          </button>
+        </div>
+
+        <p class="page-number">2</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
